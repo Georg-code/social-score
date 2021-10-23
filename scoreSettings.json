@@ -1,0 +1,28 @@
+{
+     "default": 1000,
+     "v+1": 3,
+     "v+2": 5,
+     "v+3": 100,
+     "v-1": -5,
+     "v-2": -20,
+     "v-3": -100,
+     "message": "v+1",
+     "image": "v+2",
+     "nsfw": "v-2",
+     "mention_xi_positive": "v+3",
+     "mention_xi_negative": "v-4",
+     "hate_people_with_lower_score": "v+2",
+     "ask_for_score": "v-1",
+     "randomPunishFactor": 1,
+     "randomPunishFactor_score": "v-2",
+     "negative1": ["dumm", "arsch", "cry", "captialismus", "winnie puuh", "discord", "instagram", "google", "facebook", "microsoft", "amazon", "bad", "winnie"],
+     "negative2": ["geld", "zensur", "censor", "Usa", "Amerika", "america", "freiheit", "liberty", "Meinung"],
+     "negative3": ["4. Juni", "4th June", "1989", "taiwan", "umerziehungslager", "umerziehung", "re-education", "reeducation", "muslim", "uiguren", "tianmen square", "tianmen", "tiananmen", "tianannmen square"],
+     "postive": ["kommunismus","china", "Karl Marx", "manifest", "communism", "alps", "alpsBte", "Xi", "Jinping", "alibaba", "alipay", "People's republic",  "massacre", "great nation of china"],
+     "negation": ["not", "don't", "dont", "'nt", "nicht"],
+     "xi_name": ["xi", "Jinping"],
+     "xi_positive": ["adore", "love", "hero", "best"],
+     "xi_negative": ["hate", "bad", "wrong", "prison"]
+
+
+}
