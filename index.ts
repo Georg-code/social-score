@@ -17,6 +17,10 @@ const client = new Client({
 
 client.on("ready", () => {
   console.log(`Logged in`);
+  client.user.setActivity("China", {
+  type: "STREAMING",
+  url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  });
 });
 
 client.on("messageCreate", (message) => {
@@ -120,20 +124,5 @@ client.on("messageCreate", (message) => {
 });
 
 
-
-client.on('voiceStateUpdate', (oldState, newState) => {
-    if(oldState.channelId === newState.channelId) {
-        console.log('a user has not moved!')
-    }
-    if(oldState.channelId != null && newState.channelId != null && newState.channelId != oldState.channelId) {
-        console.log('a user switched channels')
-    }
-    if(oldState.channelId === null) {
-        console.log('a user joined!')
-    }
-    if (newState.channelId === null) {
-        console.log('a user left!')
-    }
-});
 
 client.login(process.env.TOKEN);
