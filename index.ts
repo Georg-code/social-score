@@ -12,14 +12,15 @@ const client = new Client({
     Intents.FLAGS.GUILDS,
     Intents.FLAGS.GUILD_MESSAGES,
     Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
+    Intents.FLAGS.GUILD_VOICE_STATES,
   ],
 });
 
 client.on("ready", () => {
   console.log(`Logged in`);
   client.user.setActivity("China", {
-  type: "STREAMING",
-  url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    type: "STREAMING",
+    url: "https://www.youtube.com/watch?v=OjNpRbNdR7E",
   });
 });
 
@@ -33,9 +34,9 @@ client.on("messageCreate", (message) => {
       try {
         points += score["v-2"];
         message.reply(
-          `Du hast ${parseInt(
+          `您目前有 ${parseInt(
             db.getData(`/users/${message.author.id}/points`)
-          )} Punkte`
+          )} 分`
         );
       } catch {
         message.reply("retry..");
@@ -106,14 +107,13 @@ client.on("messageCreate", (message) => {
       false
     );
 
-    const setMute = async (status : boolean) => {
+    const setMute = async (status: boolean) => {
       try {
-    await  message.member.voice.setMute(status);
+        await message.member.voice.setMute(status);
       } catch {
-        console.log("Not in voice")
-  }
-}
-
+        console.log("Not in voice");
+      }
+    };
 
     if (dbpoints + points <= 0) {
       setMute(true);
@@ -123,6 +123,28 @@ client.on("messageCreate", (message) => {
   }
 });
 
-
+client.on("voiceStateUpdate", (oldState, newState) => {
+  
+  const setMute = async (status: boolean) => {
+    try {
+      await oldState.member.voice.setMute(status);
+    } catch {
+      console.log("leave");
+    }
+  };
+  let dbpoints = 1000;
+  try {
+    dbpoints = parseInt(
+        db.getData(`/users/${newState.member.id}/points`)
+      );
+  } catch {
+    dbpoints = 1000;
+  }
+  if (dbpoints <= 0) {
+    setMute(true);
+  } else {
+    setMute(false);
+  }
+});
 
 client.login(process.env.TOKEN);
