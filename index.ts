@@ -34,9 +34,9 @@ client.on("messageCreate", (message) => {
       try {
         points += score["v-2"];
         message.reply(
-          `您目前有 ${parseInt(
+          `🇨🇳 您目前有 ${parseInt(
             db.getData(`/users/${message.author.id}/points`)
-          )} 分`
+          )} 分 🇨🇳`
         );
       } catch {
         message.reply("retry..");
@@ -109,7 +109,8 @@ client.on("messageCreate", (message) => {
 
     const setMute = async (status: boolean) => {
       try {
-        await message.member.voice.setMute(status);
+        message.reply(status + "")
+        console.log("Finished")
       } catch {
         console.log("Not in voice");
       }
@@ -127,7 +128,8 @@ client.on("voiceStateUpdate", (oldState, newState) => {
   
   const setMute = async (status: boolean) => {
     try {
-      await oldState.member.voice.setMute(status);
+        console.log(status + "")
+      //await oldState.member.voice.setMute(status);
     } catch {
       console.log("leave");
     }
