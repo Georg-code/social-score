@@ -109,7 +109,7 @@ client.on("messageCreate", (message) => {
 
     const setMute = async (status: boolean) => {
       try {
-        message.reply(status + "")
+        message.member.voice.setMute(status);
         console.log("Finished")
       } catch {
         console.log("Not in voice");
@@ -129,7 +129,7 @@ client.on("voiceStateUpdate", (oldState, newState) => {
   const setMute = async (status: boolean) => {
     try {
         console.log(status + "")
-      //await oldState.member.voice.setMute(status);
+      oldState.member.voice.setMute(status);
     } catch {
       console.log("leave");
     }
