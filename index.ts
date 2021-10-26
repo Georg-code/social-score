@@ -107,46 +107,8 @@ client.on("messageCreate", (message) => {
       false
     );
 
-    const setMute = async (status: boolean) => {
-      try {
-        message.member.voice.setMute(status);
-        console.log("Finished")
-      } catch {
-        console.log("Not in voice");
-      }
-    };
-
-    if (dbpoints + points <= 0) {
-      setMute(true);
-    } else {
-      setMute(false);
-    }
   }
 });
 
-client.on("voiceStateUpdate", (oldState, newState) => {
-  
-  const setMute = async (status: boolean) => {
-    try {
-        console.log(status + "")
-      oldState.member.voice.setMute(status);
-    } catch {
-      console.log("leave");
-    }
-  };
-  let dbpoints = 1000;
-  try {
-    dbpoints = parseInt(
-        db.getData(`/users/${newState.member.id}/points`)
-      );
-  } catch {
-    dbpoints = 1000;
-  }
-  if (dbpoints <= 0) {
-    setMute(true);
-  } else {
-    setMute(false);
-  }
-});
 
 client.login(process.env.TOKEN);
