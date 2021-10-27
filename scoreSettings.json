@@ -15,13 +15,13 @@
      "ask_for_score": "v-1",
      "randomPunishFactor": 1,
      "randomPunishFactor_score": "v-2",
-     "negative1": ["dumm", "arsch", "cry", "captialismus", "winnie puuh", "discord", "instagram", "google", "facebook", "microsoft", "amazon", "bad", "winnie"],
-     "negative2": ["geld", "zensur", "censor", "Usa", "Amerika", "america", "freiheit", "liberty", "Meinung"],
-     "negative3": ["4. Juni", "4th June", "1989", "taiwan", "umerziehungslager", "umerziehung", "re-education", "reeducation", "muslim", "uiguren", "tianmen square", "tianmen", "tiananmen", "tianannmen square"],
-     "postive": ["kommunismus","china", "Karl Marx", "manifest", "communism", "alps", "alpsBte",  "alibaba", "alipay", "People's republic",  "massacre", "great nation of china"],
+     "negative1": ["dumm", "arsch", "cry", "kaptialismus", "capitalism", "winnie pooh", "discord", "instagram", "google", "facebook", "microsoft", "amazon", "bad", "winnie"],
+     "negative2": ["geld", "zensur", "censor", "Usa", "Amerika", "america", "freiheit", "liberty", "freedom", "Meinung", "censorship", "Oppression"],
+     "negative3": ["4. Juni", "4th June", "1989", "taiwan", "umerziehungslager", "umerziehung", "re-education", "reeducation", "muslim", "uiguren", "uyghurs", "tianmen square", "tianmen", "tiananmen", "tianannmen square", "free Hong Kong", "demonstration", "demonstrations"],
+     "postive": ["kommunismus","china", "Karl Marx", "manifest", "communism", "communist manifesto", "John Cena", "John Xina", "CCP", "alps", "alpsBte",  "alibaba", "alipay", "People's republic", "great nation of china"],
      "negation": ["not", "don't", "dont", "'nt", "nicht"],
-     "xi_name": ["xi", "Jinping"],
-     "xi_positive": ["adore", "love", "hero", "best"],
+     "xi_name": ["xi", "Jinping", "Jin", "Jing", "ping"],
+     "xi_positive": ["adore", "love", "hero", "best", "great", "competent", "caring", "handsome"],
      "xi_negative": ["hate", "bad", "wrong", "prison"]
 
 
